@@ -12,7 +12,7 @@ pipeline {
         GIT_BRANCH = "master"
     }
     
-  stages {
+    stages {
         stage('Cleanup Workspace') {
             steps {
                 script {
@@ -20,11 +20,12 @@ pipeline {
                 }
             }
         }
-  }  
-    stage('Clone Repository') {
+        
+        stage('Clone Repository') {
             steps {
                 script {
-                     clone('https://github.com/mukeshchaudhary14/tws-e-commerce-app.git'," master")
+                    clone("https://github.com/mukeshchaudhary14/tws-e-commerce-app.git","master")
+                }
             }
         }
         
