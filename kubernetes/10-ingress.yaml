@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - easyshopletsdeployit.shop
+    - devops.easyshopletsdeployit.shop
     secretName: easyshop-tls-secret  # Cert-Manager will manage this
   rules:
-  - host: easyshopletsdeployit.shop
+  - host: devops.easyshopletsdeployit.shop
       paths:
       - path: /
         pathType: Prefix
