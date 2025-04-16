@@ -1,4 +1,4 @@
-@Library('Shared') _
+@Library('easyshop-shared-lib') _
 
 pipeline {
     agent any
