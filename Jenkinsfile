@@ -12,20 +12,19 @@ pipeline {
         GIT_BRANCH = "master"
     }
     
-    stages {
+  stages {
         stage('Cleanup Workspace') {
             steps {
                 script {
-                    cleanWs()
+                    clean_ws()
                 }
             }
         }
         
-        stage('Clone Repository') {
+    stage('Clone Repository') {
             steps {
-                 git branch: 'main', 
-                     url: 'https://github.com/mukeshchaudhary14/tws-e-commerce-app.git',
-                     credentialsId: 'github-token
+                script {
+                     clone('https://github.com/mukeshchaudhary14/tws-e-commerce-app.git'," master")
             }
         }
         
