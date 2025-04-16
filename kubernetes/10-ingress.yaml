@@ -14,6 +14,7 @@ spec:
     secretName: easyshop-tls-secret  # Cert-Manager will manage this
   rules:
   - host: devops.easyshopletsdeployit.shop
+    http:  # <-- missing in your version
       paths:
       - path: /
         pathType: Prefix
@@ -22,4 +23,3 @@ spec:
             name: easyshop-service
             port:
               number: 80
-
