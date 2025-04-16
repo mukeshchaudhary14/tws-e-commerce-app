@@ -23,9 +23,9 @@ pipeline {
         
         stage('Clone Repository') {
             steps {
-                script {
-                    clone("https://github.com/mukeshchaudhary14/tws-e-commerce-app.git","master")
-                }
+                 git branch: 'main', 
+                     url: 'https://github.com/mukeshchaudhary14/tws-e-commerce-app.git',
+                     credentialsId: 'github-token
             }
         }
         
